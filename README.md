@@ -12,6 +12,8 @@ Garg, A., Bhasin, M., & Raghava, G. P. S. (2005).
 **Support Vector Machine-based method for subcellular localization of human proteins using amino acid compositions, their order, and similarity search.** *Journal of Biological Chemistry*, 280(15), 14427–14432. 
 [https://doi.org/10.1074/jbc.M411789200](https://doi.org/10.1074/jbc.M411789200)
 
+zenodo:-(https://doi.org/10.5281/zenodo.20140367)
+
 ---
 
 ## About the Platform
