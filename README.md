@@ -1,78 +1,70 @@
-# GPCRsclass: Classification of Amine-Type G-Protein-Coupled Receptors
+# HSLpred: SVM-based Method for Subcellular Localization of Human Proteins
 
-Welcome to the official documentation for **GPCRsclass**, a computational tool developed to recognize and classify the amine subfamily of G-protein-coupled receptors (GPCRs). Amine-type receptors are major drug targets for treating nervous disorders and psychiatric diseases, making their accurate identification essential for pharmaceutical research.
+Welcome to the official documentation for **HSLpred**, a computational tool developed for predicting the subcellular localization of human proteins. Accurate localization is essential for understanding the biological function of proteins and their roles in various human diseases. HSLpred utilizes Support Vector Machines (SVM) and integrates diverse protein features, including amino acid composition, dipeptide composition, and similarity-based information, to provide high-accuracy predictions.
 
-**Web Server:** [http://www.imtech.res.in/raghava/gpcrsclass/](http://www.imtech.res.in/raghava/gpcrsclass/)(https://webs.iiitd.edu.in/raghava/hslpred)
+**Web Server:** [http://www.imtech.res.in/raghava/hslpred/](http://www.imtech.res.in/raghava/hslpred/)
 
 ---
 
 ## Citation
 
-Bhasin, M., & Raghava, G. P. S. (2005). 
-**GPCRsclass: a web tool for the classification of amine type of G-protein-coupled receptors.** *Nucleic Acids Research*, 33(Web Server issue), W143-W147. 
-[https://doi.org/10.1093/nar/gki351](https://doi.org/10.1093/nar/gki351)
+Garg, A., Bhasin, M., & Raghava, G. P. S. (2005). 
+**Support Vector Machine-based method for subcellular localization of human proteins using amino acid compositions, their order, and similarity search.** *Journal of Biological Chemistry*, 280(15), 14427–14432. 
+[https://doi.org/10.1074/jbc.M411789200](https://doi.org/10.1074/jbc.M411789200)
 
 ---
 
 ## About the Platform
 
-GPCRsclass utilizes Support Vector Machines (SVM) to classify amine-type receptors based on their primary sequence. The method builds upon the observation that different types of amine receptors have distinct amino acid compositions. It provides a multi-level classification scheme to categorize these receptors into specific subfamilies.
+HSLpred is specifically optimized for the human proteome. While many general eukaryotic localization tools exist, HSLpred focuses on the unique characteristics of human proteins to classify them into four major subcellular compartments:
+* **Cytoplasm**
+* **Mitochondria**
+* **Nucleus**
+* **Plasma Membrane**
 
-### Classification Hierarchy
-The tool classifies receptors into the following subfamilies:
-* **Acetylcholine**
-* **Adrenoceptor**
-* **Dopamine**
-* **Histamine**
-* **Serotonin**
-
----
-
-## Key Features
-
-### Prediction Modules
-* **Amino Acid Composition**: Classifies receptors based on the frequency of the 20 natural amino acids.
-* **Dipeptide Composition**: Utilizes the frequency of pairs of adjacent amino acids to capture local order information.
-* **Hybrid Approach**: Combines various sequence-based features to achieve superior classification performance.
-
-### Performance Highlights
-* **High Accuracy**: The dipeptide-based SVM model achieved an overall accuracy of 99.4% for classifying the five amine subfamilies.
-* **Robust Validation**: Models were rigorously evaluated using 5-fold cross-validation on a dataset of 167 amine-type GPCRs.
-* **Low False Positives**: Designed to effectively discriminate amine-type receptors from other types of GPCRs and non-GPCR proteins.
+### Key Features
+* **SVM Implementation**: Utilizes Support Vector Machines to provide robust and reliable classification.
+* **Feature Diversity**: Incorporates traditional amino acid composition, dipeptide composition, and physicochemical properties.
+* **Evolutionary Context**: Leverages PSI-BLAST for similarity searches against a non-redundant database of experimentally annotated proteins.
+* **Hybrid Modules**: Combines composition-based data with similarity-based data to maximize prediction performance.
 
 ---
 
 ## Technical Overview
 
-GPCRsclass leverages the SVM-light package to handle high-dimensional sequence data.
+The method was developed and validated using a clean, non-redundant dataset of human proteins.
 
-| Feature Type | Number of Descriptors | Accuracy (%) |
-| :--- | :--- | :--- |
-| **Amino Acid Composition** | 20 | 89.8% |
-| **Dipeptide Composition** | 400 | 99.4% |
+| Prediction Module | Accuracy (%) |
+| :--- | :--- |
+| **Amino Acid Composition** | 76.6% |
+| **Dipeptide Composition** | 77.8% |
+| **PSI-BLAST (Similarity)** | 73.3% |
+| **Hybrid (SVM + PSI-BLAST)** | 84.4% |
 
 ---
 
 ## Model Functionality
 
-* **Subfamily Recognition**: Accurately determines which specific amine ligand (e.g., dopamine vs. serotonin) a query GPCR is likely to bind.
-* **Sequence Scanning**: Users can submit one or more protein sequences to identify potential amine-type GPCRs.
-* **Detailed Reports**: Provides a probability or confidence score for each predicted subfamily classification.
+HSLpred uses a systematic approach to capture different levels of protein information:
+
+* **Compositional Analysis**: Analyzes the frequency of single amino acids and adjacent pairs (dipeptides) to capture global and local sequence patterns.
+* **Similarity Search**: Queries are searched against a curated dataset; if a highly significant hit is found, the localization of the hit is used to guide the prediction.
+* **Weighted Integration**: The hybrid module integrates scores from individual components to provide a final localized prediction with high confidence.
 
 ---
 
 ## Applications
 
-* **Drug Discovery**: Identifying novel amine receptors as potential targets for neurological and psychiatric drugs.
-* **Genome Annotation**: Automatically classifying GPCR sequences identified in newly sequenced genomes.
-* **Structural Biology**: Providing a basis for comparative modeling and docking studies of amine-type receptors.
+* **Human Proteomics**: Annotating the localization of newly discovered or poorly characterized human proteins.
+* **Biomedical Research**: Understanding how mislocalization of proteins contributes to human pathologies.
+* **Drug Target Identification**: Identifying proteins in specific compartments (e.g., plasma membrane) that may be accessible for therapeutic intervention.
 
 ---
 
 ## Contact & Authors
 
 **Prof. Gajendra P. S. Raghava**
-Bioinformatics Center, Institute of Microbial Technology, Sector 39A, Chandigarh, India.
+Bioinformatics Centre, Institute of Microbial Technology, Sector 39A, Chandigarh, India.
 **Email**: raghava@imtech.res.in
 
 ---
