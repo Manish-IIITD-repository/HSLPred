@@ -2,7 +2,7 @@
 
 Welcome to the official documentation for **HSLpred**, a computational tool developed for predicting the subcellular localization of human proteins. Accurate localization is essential for understanding the biological function of proteins and their roles in various human diseases. HSLpred utilizes Support Vector Machines (SVM) and integrates diverse protein features, including amino acid composition, dipeptide composition, and similarity-based information, to provide high-accuracy predictions.
 
-**Web Server:** [http://www.imtech.res.in/raghava/hslpred/](http://www.imtech.res.in/raghava/hslpred/)
+**Web Server:** [http://www.imtech.res.in/raghava/hslpred/](http://www.imtech.res.in/raghava/hslpred/)(https://webs.iiitd.edu.in/raghava/hslpred)
 
 ---
 
