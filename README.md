@@ -2,7 +2,7 @@
 
 Welcome to the official documentation for **GPCRsclass**, a computational tool developed to recognize and classify the amine subfamily of G-protein-coupled receptors (GPCRs). Amine-type receptors are major drug targets for treating nervous disorders and psychiatric diseases, making their accurate identification essential for pharmaceutical research.
 
-**Web Server:** [http://www.imtech.res.in/raghava/gpcrsclass/](http://www.imtech.res.in/raghava/gpcrsclass/)
+**Web Server:** [http://www.imtech.res.in/raghava/gpcrsclass/](http://www.imtech.res.in/raghava/gpcrsclass/)(https://webs.iiitd.edu.in/raghava/hslpred)
 
 ---
 
